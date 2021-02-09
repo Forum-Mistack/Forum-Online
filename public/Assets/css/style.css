@@ -1,0 +1,52 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* utility */
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn-custom {
+  background-color: #28285c;
+  color: #ffffff;
+}
+
+.btn-custom:hover {
+  background-color: #36367d;
+  color: #ffffff;
+}
+
+.form-custom {
+  background-color: #ebeef1;
+  border: none;
+}
+
+.form-custom:focus {
+  background-color: #ebeef1;
+  border: none;
+}
+
+.title-custom {
+  font-size: 2.1em;
+  font-weight: 700;
+}
+
+.title-center {
+  text-align: center;
+}
+
+.paragraph-left {
+  font-size: 0.9em;
+  color: white;
+  font-weight: 200;
+  text-align: center;
+}
+/* utility */
+
+@media (min-width: 768px) {
+  .paragraph-left {
+    text-align: left;
+  }
+}

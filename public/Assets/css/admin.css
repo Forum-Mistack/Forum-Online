@@ -1,0 +1,131 @@
+body {
+  background-color: #f5f5fa;
+}
+
+/* Utility */
+p {
+  color: #bbbbbb;
+  font-weight: 300;
+  margin-top: -5px;
+}
+
+.card {
+  border: none;
+}
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.wrapper .wrapper-content {
+  position: relative;
+}
+/* Utility End */
+
+/* Sidebar */
+.sidebar {
+  z-index: 999;
+  position: fixed;
+  width: 230px;
+  left: -230px;
+  background-color: #28285c;
+  transition: all 0.5s ease;
+}
+
+.sidebar.toggled {
+  position: fixed;
+  left: 0px;
+  height: 100%;
+}
+
+#sidebar-toggle {
+  position: absolute;
+  left: 190px;
+  top: 70px;
+  padding: 10px;
+  width: 60px;
+  background-color: #28285c;
+  border-radius: 100px;
+}
+
+#sidebar-toggle i {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.sidebar .brand h3 {
+  font-size: 1.5em;
+}
+
+.sidebar .user-info .card {
+  width: 100px;
+  height: 100px;
+}
+
+.sidebar .user-info h5 {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.sidebar .user-info p {
+  font-size: 0.8em;
+}
+
+.sidebar .limit {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+/* Sidebar End */
+
+/* Content */
+
+/* Heading */
+.heading h1 {
+  font-size: 1.7em;
+  font-weight: 500;
+  margin: 15px 0 15px 0;
+}
+/* Heading End */
+
+/* Body */
+
+.body .custom-card {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 25px;
+  margin-right: 50px;
+}
+
+.body .btn-custom {
+  width: 200px;
+}
+
+.body .table tr {
+  border-top: 1px solid #aeaeae;
+  border-bottom: 1px solid #aeaeae;
+}
+/* Body End */
+
+/* Content End */
+
+/* Desktop Version */
+@media (min-width: 768px) {
+  .wrapper .wrapper-content {
+    width: 83%;
+    left: 230px;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    left: 0px;
+  }
+
+  #sidebar-toggle {
+    visibility: hidden;
+  }
+
+  /* Sidebar End */
+}
