@@ -18,4 +18,9 @@ class PenggunaModel extends Model
 
         return $this->where(['id_pengguna' => $id])->first();
     }
+
+    public function countPengguna()
+    {
+        return $this->selectCount('nama')->get();
+    }
 }

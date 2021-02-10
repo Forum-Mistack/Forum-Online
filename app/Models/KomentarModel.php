@@ -19,4 +19,9 @@ class KomentarModel extends Model
 
         return $this->where(['id_komentar' => $id])->first();
     }
+
+    public function countKomentar()
+    {
+        return $this->selectCount('komentar')->get();
+    }
 }

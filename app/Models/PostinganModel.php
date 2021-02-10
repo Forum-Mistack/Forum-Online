@@ -19,4 +19,9 @@ class PostinganModel extends Model
 
         return $this->where('id_post', $id)->first();
     }
+
+    public function countPostingan()
+    {
+        return $this->selectCount('pertanyaan')->get();
+    }
 }
