@@ -36,6 +36,7 @@ $routes->get('/UserAdmin', 'Admin/UserAdmin::index');
 $routes->get('/Kategori', 'Admin/Kategori::index');
 $routes->get('/Komentar', 'Admin/Komentar::index');
 $routes->get('/Pengguna', 'Admin/Pengguna::index');
+$routes->get('/Postingan', 'Admin/Postingan::index');
 
 /**
  * --------------------------------------------------------------------
