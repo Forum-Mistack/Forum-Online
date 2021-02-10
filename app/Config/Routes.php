@@ -32,12 +32,13 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/Dashboard', 'Admin/Dashboard::index');
-$routes->get('/UserAdmin', 'Admin/UserAdmin::index');
-$routes->get('/Kategori', 'Admin/Kategori::index');
-$routes->get('/Komentar', 'Admin/Komentar::index');
-$routes->get('/Pengguna', 'Admin/Pengguna::index');
-$routes->get('/Postingan', 'Admin/Postingan::index');
+$routes->get('/Admin', 'Admin/Auth::index');
+$routes->get('/Dashboard', 'Admin/Dashboard::index', ['filter' => 'auth']);
+$routes->get('/UserAdmin', 'Admin/UserAdmin::index', ['filter' => 'auth']);
+$routes->get('/Kategori', 'Admin/Kategori::index', ['filter' => 'auth']);
+$routes->get('/Komentar', 'Admin/Komentar::index', ['filter' => 'auth']);
+$routes->get('/Pengguna', 'Admin/Pengguna::index', ['filter' => 'auth']);
+$routes->get('/Postingan', 'Admin/Postingan::index', ['filter' => 'auth']);
 
 /**
  * --------------------------------------------------------------------
