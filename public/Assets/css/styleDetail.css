@@ -1,0 +1,77 @@
+body {
+  background-color: #f5f5fa;
+}
+
+.custom-outline-btn {
+  border: 1px solid #f6546f;
+  margin-bottom: 15px;
+  color: #f6546f;
+}
+
+.custom-outline-btn:hover {
+  background-color: #f6546f;
+  border: 1px solid #f6546f;
+}
+
+/* Section Post */
+.heading button {
+  border: none;
+}
+
+.heading .custom-search-button {
+  float: right;
+  position: relative;
+  right: 5px;
+  top: -35px;
+  width: 33px;
+  height: 33px;
+  border: none;
+  z-index: 999;
+}
+
+.post {
+  margin-bottom: 60px;
+}
+
+.custom-rounded {
+  width: 50px;
+  height: 50px;
+  margin-top: 15px;
+}
+
+.custom-rounded i {
+  position: relative;
+  font-size: 30px;
+  top: 8px;
+  left: 12px;
+}
+
+.username {
+  width: 100px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.card-title {
+  font-size: 1em;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+}
+
+.card-title:hover {
+  color: #000000;
+}
+
+.text-time {
+  font-size: 0.7em;
+  color: #aeaeae;
+}
+
+/* Section Post End */
+
+/* Section Comment */
+.comment {
+  margin-bottom: 60px;
+}
+/* Section Comment End */
