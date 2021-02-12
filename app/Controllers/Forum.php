@@ -3,20 +3,35 @@
 namespace App\Controllers;
 
 use App\Models\PenggunaModel;
+use App\Models\PostinganModel;
+use App\Models\KategoriModel;
 
 class Forum extends BaseController
 {
     protected $session;
     protected $penggunaModel;
+    protected $kategoriModel;
+    protected $postinganModel;
 
     public function __construct()
     {
         $this->session = session();
         $this->penggunaModel = new PenggunaModel();
+        $this->kategoriModel = new KategoriModel();
+        $this->postinganModel = new PostinganModel();
     }
     public function index()
     {
         return view('landing_page');
+    }
+
+    public function Profile($id)
+    {
+        $data = [
+            'post' => $this->postinganModel->getPostinganJoinByIdPengguna($id)->getResultArray(0)
+        ];
+
+        return view('profile', $data);
     }
 
     public function Login()
@@ -27,6 +42,24 @@ class Forum extends BaseController
     public function SignUp()
     {
         return view('sign_up');
+    }
+
+    public function Forum()
+    {
+        $keyword = $this->request->getVar('keyword');
+
+        if ($keyword) {
+            $postingan = $this->postinganModel->cari($keyword);
+        } else {
+            $postingan = $this->postinganModel->getPostinganJoin();
+        }
+
+        $data = [
+            'kategori' => $this->kategoriModel->getKategori(),
+            'post' => $postingan->getResultArray(0)
+        ];
+
+        return view('forum', $data);
     }
 
     // Fungsi untuk menyimpan data pengguna yang mendaftar
