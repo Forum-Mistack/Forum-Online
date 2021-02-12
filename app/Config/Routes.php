@@ -40,6 +40,11 @@ $routes->get('/Komentar', 'Admin/Komentar::index', ['filter' => 'auth']);
 $routes->get('/Pengguna', 'Admin/Pengguna::index', ['filter' => 'auth']);
 $routes->get('/Postingan', 'Admin/Postingan::index', ['filter' => 'auth']);
 
+$routes->get('/', 'Forum::index');
+$routes->get('/Login', 'Forum::Login');
+$routes->get('/SignUp', 'Forum::SignUp');
+$routes->get('/Logout', 'Forum::Logout');
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
