@@ -1,61 +1,144 @@
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-header {
-  height: 100vh;
-  padding: 0px 60px;
+/* utility */
+.vector {
+  width: 340px;
+  display: block;
   margin: auto;
 }
+/* Utility End */
 
-header h2 {
-  font-weight: bold;
+/* Jumbotron */
+.jumbotron {
+  margin-top: -101px;
+  background-color: #28285c;
+  padding: 230px 0 230px;
 }
 
-header p {
-  margin-bottom: 40px;
-  font-weight: 100;
+.jumbotron::before {
+  content: url(../img/Union.png);
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-form {
-  padding: 0 80px;
+.jumbotron h1 {
+  color: white;
+  font-size: 2.1em;
+  font-weight: 700;
+  text-align: center;
 }
 
-.form-input {
-  width: 100%;
-  border: 0px solid transparent;
-  border-radius: 0;
-  border-bottom: 1px solid #aaa;
-  padding: 1em 0.5em 0.5em;
-  padding-left: 3.5em;
-  outline: none;
-  margin: 1.5em auto;
-  transition: all 0.5s ease;
+.jumbotron .custom-search-button {
+  position: relative;
+  margin-left: 30px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f6546f;
+  border: none;
+  color: #ffffff;
 }
 
-.form-input:focus {
-  border-bottom-color: #28285d;
-  border-radius: 4px;
+.jumbotron i {
+  color: #ffffff;
+  position: absolute;
+  right: 9px;
+  bottom: 8px;
+}
+/* Jumbotron End */
+
+/* Section About */
+.about {
+  margin: 100px 0 0 0;
 }
 
-.input-icon {
+.about .paragraph-center {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.about .wrapper-card {
+  margin: 45px 0 100px 0;
+}
+
+.about .card {
+  margin-top: 20px;
+  border: none;
+}
+
+.about .vector-about {
+  width: 200px;
+}
+
+.about .title-about {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+/* Section About End */
+
+/* Section Contact */
+.contact {
+  margin: 100px 0 100px 0;
+}
+
+.contact input[type="text"],
+.contact input[type="email"] {
+  padding-left: 50px;
+}
+
+.contact .form {
+  margin-top: 40px;
+}
+
+.contact .input-icon {
   position: relative;
 }
 
 .input-icon i {
-  position: absolute;
+  position: relative;
+  bottom: 30px;
   left: 15px;
-  top: 42px;
-  color: gray;
+  color: #a3a3a3;
 }
+/* Section Contact End */
 
-.btn-purple {
-  background-color: #28285d;
-  color: #ffffff;
-  width: 150px;
-}
+/* Desktop Version */
+@media (min-width: 768px) {
+  .vector {
+    width: 500px;
+  }
 
-.btn-purple:hover {
-  background-color: #1b1b3f;
-  color: #ffffff;
+  /* Jumbotron */
+  .jumbotron {
+    margin-top: -101px;
+    background-color: #28285c;
+    padding: 230px 0 230px;
+  }
+  .jumbotron h1 {
+    text-align: left;
+  }
+
+  .jumbotron .form-control {
+    left: 0px;
+    margin-bottom: 0px;
+  }
+
+  .jumbotron .custom-search-button {
+    left: -35px;
+  }
+  /* Jumbotron End */
+
+  /* Section About */
+  .paragraph-center {
+    margin: 0 340px 0 340px;
+  }
+
+  .about .card {
+    margin-top: 0;
+  }
+  /* Section About End */
+
+  /* Section Contact */
+  .title-center {
+    text-align: left;
+  }
+  /* Section Contact End */
 }

@@ -23,4 +23,21 @@ class PenggunaModel extends Model
     {
         return $this->selectCount('nama')->get();
     }
+
+    public function checkPenggunanId()
+    {
+        $this->selectMax('id_pengguna', 'id');
+        $query = $this->get();
+
+        $serialNumber = substr($query->getResultArray()[0]['id'], 2, 3);
+        $alphabet = "PG";
+
+        if (!empty($this->findAll())) {
+            $newId = $alphabet . sprintf("%03s", $serialNumber + 1);
+        } else {
+            $newId = "PG000";
+        }
+
+        return $newId;
+    }
 }

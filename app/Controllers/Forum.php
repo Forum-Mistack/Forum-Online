@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\PenggunaModel;
 use App\Models\PostinganModel;
 use App\Models\KategoriModel;
+use App\Models\KomentarModel;
 
 class Forum extends BaseController
 {
@@ -12,6 +13,7 @@ class Forum extends BaseController
     protected $penggunaModel;
     protected $kategoriModel;
     protected $postinganModel;
+    protected $komentarModel;
 
     public function __construct()
     {
@@ -19,6 +21,7 @@ class Forum extends BaseController
         $this->penggunaModel = new PenggunaModel();
         $this->kategoriModel = new KategoriModel();
         $this->postinganModel = new PostinganModel();
+        $this->komentarModel = new KomentarModel();
     }
     public function index()
     {
@@ -60,6 +63,18 @@ class Forum extends BaseController
         ];
 
         return view('forum', $data);
+    }
+
+    public function DetailForum($id)
+    {
+        $data = [
+            'kategori' => $this->kategoriModel->getKategori(),
+            'post' => $this->postinganModel->getPostinganJoin($id)->getResultArray(0),
+            'komentar' => $this->komentarModel->getKomentarByIdPost($id)->getResultArray(0),
+            'countKomentar' => $this->komentarModel->countKomentar($id)->getResultArray()[0]
+        ];
+
+        return view('detail_forum', $data);
     }
 
     // Fungsi untuk menyimpan data pengguna yang mendaftar
