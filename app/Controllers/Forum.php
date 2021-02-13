@@ -124,4 +124,31 @@ class Forum extends BaseController
         $this->session->destroy();
         return redirect()->to('/Login');
     }
+
+    // fungsi save postingan
+    public function SavePostingan()
+    {
+        $this->postinganModel->insert([
+            'id_post' => $this->postinganModel->checkPostId(),
+            'judul' => $this->request->getVar('judul'),
+            'pertanyaan' => $this->request->getVar('pertanyaan'),
+            'id_kategori' => $this->request->getVar('kategori'),
+            'id_pengguna' => $this->session->get('id_pengguna')
+        ]);
+
+        return redirect()->to('/Pertanyaan');
+    }
+
+    // fungsi save Komentar
+    public function Savekomentar($id)
+    {
+        $this->komentarModel->insert([
+            'id_komentar' => $this->komentarModel->checkKomentarId(),
+            'komentar' => $this->request->getVar('komentar'),
+            'id_post' => $id,
+            'id_pengguna' => $this->session->get('id_pengguna')
+        ]);
+
+        return redirect()->to("/Pertanyaan/$id");
+    }
 }
