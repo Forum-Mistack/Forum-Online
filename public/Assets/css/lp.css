@@ -1,0 +1,146 @@
+/* utility */
+.vector {
+  width: 340px;
+  display: block;
+  margin: auto;
+}
+/* Utility End */
+
+/* Jumbotron */
+.jumbotron {
+  margin-top: -101px;
+  background-color: #28285c;
+  padding: 230px 0 230px;
+}
+
+.jumbotron::before {
+  content: url(../img/Union.png);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.jumbotron h1 {
+  color: white;
+  font-size: 2.1em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.jumbotron .custom-search-button {
+  position: relative;
+  margin-left: 35px;
+  margin-top: 15px;
+  margin-bottom: 45px;
+  padding: 10px;
+  background-color: #f6546f;
+  border: none;
+  color: #ffffff;
+}
+
+.jumbotron i {
+  color: #ffffff;
+  position: absolute;
+  right: 9px;
+  bottom: 8px;
+}
+/* Jumbotron End */
+
+/* Section About */
+.about {
+  margin: 100px 0 0 0;
+}
+
+.about .paragraph-center {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.about .wrapper-card {
+  margin: 45px 0 100px 0;
+}
+
+.about .card {
+  margin-top: 20px;
+  border: none;
+}
+
+.about .vector-about {
+  width: 200px;
+}
+
+.about .title-about {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+/* Section About End */
+
+/* Section Contact */
+.contact {
+  margin: 100px 0 100px 0;
+}
+
+.contact input[type="text"],
+.contact input[type="email"] {
+  padding-left: 50px;
+}
+
+.contact .form {
+  margin-top: 40px;
+}
+
+.contact .input-icon {
+  position: relative;
+}
+
+.input-icon i {
+  position: relative;
+  bottom: 30px;
+  left: 15px;
+  color: #a3a3a3;
+}
+/* Section Contact End */
+
+/* Desktop Version */
+@media (min-width: 768px) {
+  .vector {
+    width: 500px;
+  }
+
+  /* Jumbotron */
+  .jumbotron {
+    margin-top: -101px;
+    background-color: #28285c;
+    padding: 270px 0 190px 0;
+  }
+
+  .jumbotron h1 {
+    text-align: left;
+  }
+
+  .jumbotron .form-control {
+    left: 0px;
+    margin-bottom: 0px;
+  }
+
+  .jumbotron .custom-search-button {
+    left: -35px;
+  }
+  /* Jumbotron End */
+
+  /* Section About */
+  .paragraph-center {
+    margin: 0 340px 0 340px;
+  }
+
+  .about .card {
+    margin-top: 0;
+  }
+  /* Section About End */
+
+  /* Section Contact */
+  .title-center {
+    text-align: left;
+  }
+  /* Section Contact End */
+}

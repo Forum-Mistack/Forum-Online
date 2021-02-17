@@ -1,0 +1,79 @@
+/* Navbar */
+.navbar {
+  z-index: 99;
+  margin-top: 0;
+}
+
+.navbar.scrolled {
+  background-color: #28285c;
+  box-shadow: #aeaeae 1px 1px 10px;
+}
+
+.navbar-brand {
+  z-index: 999;
+}
+
+.navbar-toggler {
+  z-index: 999;
+}
+
+.navbar-collapse {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  padding: 110px 20px 20px 20px;
+  background-color: #ffffff;
+}
+
+.navbar-brand img {
+  width: 40px;
+}
+
+.navbar-brand .title-brand {
+  margin-left: 15px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+.navbar-brand .title-brand.title-blue {
+  color: #28285c;
+}
+
+.navbar-nav .nav-link {
+  color: #000000 !important;
+}
+
+.navbar-nav .nav-link.nav-link-blue {
+  color: #28285c !important;
+}
+
+.navbar-nav .btn-custom-secondary {
+  color: #ffffff;
+  background-color: #f6546f;
+}
+/* Navbar */
+
+@media (min-width: 768px) {
+  /* Navbar */
+  .navbar-nav .nav-link {
+    margin-right: 25px;
+  }
+
+  .navbar-nav .btn-custom {
+    margin-left: 25px;
+    color: #ffffff;
+  }
+
+  .navbar-collapse {
+    background-color: transparent;
+    padding: 45px 20px 20px 20px;
+    left: -95px;
+  }
+
+  .navbar-nav .nav-link {
+    color: #ffffff !important;
+  }
+  /* Navbar End */
+}

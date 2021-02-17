@@ -40,6 +40,15 @@ $routes->get('/Komentar', 'Admin/Komentar::index', ['filter' => 'auth']);
 $routes->get('/Pengguna', 'Admin/Pengguna::index', ['filter' => 'auth']);
 $routes->get('/Postingan', 'Admin/Postingan::index', ['filter' => 'auth']);
 
+$routes->get('/', 'Forum::index');
+$routes->get('/Login', 'Forum::Login');
+$routes->get('/SignUp', 'Forum::SignUp');
+$routes->get('/Logout', 'Forum::Logout');
+$routes->get('/Profile/(:alphanum)', 'Forum::Profile/$1');
+$routes->get('/Pertanyaan', 'Forum::Forum');
+$routes->get('/Pertanyaan/(:alphanum)', 'Forum::DetailForum/$1');
+
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
