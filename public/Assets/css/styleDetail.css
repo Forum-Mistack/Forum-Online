@@ -1,5 +1,6 @@
 body {
   background-color: #f5f5fa;
+  margin-top: 100px;
 }
 
 .custom-outline-btn {
@@ -26,7 +27,6 @@ body {
   width: 33px;
   height: 33px;
   border: none;
-  z-index: 999;
 }
 
 .post {
@@ -63,6 +63,18 @@ body {
   color: #000000;
 }
 
+.header-card {
+  display: none;
+}
+
+.header {
+  margin-top: 30px;
+}
+
+.content-card {
+  margin-top: 30px;
+}
+
 .text-time {
   font-size: 0.7em;
   color: #aeaeae;
@@ -75,3 +87,25 @@ body {
   margin-bottom: 60px;
 }
 /* Section Comment End */
+
+.text-align {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header-card {
+    display: flex;
+  }
+
+  .header {
+    margin-top: 0;
+  }
+
+  .content-card {
+    margin-top: 0px;
+  }
+
+  .text-align {
+    text-align: left;
+  }
+}

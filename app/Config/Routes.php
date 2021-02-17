@@ -44,8 +44,10 @@ $routes->get('/', 'Forum::index');
 $routes->get('/Login', 'Forum::Login');
 $routes->get('/SignUp', 'Forum::SignUp');
 $routes->get('/Logout', 'Forum::Logout');
+$routes->get('/Profile/(:alphanum)', 'Forum::Profile/$1');
 $routes->get('/Pertanyaan', 'Forum::Forum');
 $routes->get('/Pertanyaan/(:alphanum)', 'Forum::DetailForum/$1');
+
 
 /**
  * --------------------------------------------------------------------

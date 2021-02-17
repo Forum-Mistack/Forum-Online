@@ -1,7 +1,28 @@
 /* Navbar */
 .navbar {
   z-index: 99;
-  margin-top: 30px;
+  margin-top: 0;
+}
+
+.navbar.scrolled {
+  background-color: #28285c;
+  box-shadow: #aeaeae 1px 1px 10px;
+}
+
+.navbar-brand {
+  z-index: 999;
+}
+
+.navbar-toggler {
+  z-index: 999;
+}
+
+.navbar-collapse {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  padding: 110px 20px 20px 20px;
+  background-color: #ffffff;
 }
 
 .navbar-brand img {
@@ -21,7 +42,7 @@
 }
 
 .navbar-nav .nav-link {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .navbar-nav .nav-link.nav-link-blue {
@@ -43,6 +64,16 @@
   .navbar-nav .btn-custom {
     margin-left: 25px;
     color: #ffffff;
+  }
+
+  .navbar-collapse {
+    background-color: transparent;
+    padding: 45px 20px 20px 20px;
+    left: -95px;
+  }
+
+  .navbar-nav .nav-link {
+    color: #ffffff !important;
   }
   /* Navbar End */
 }

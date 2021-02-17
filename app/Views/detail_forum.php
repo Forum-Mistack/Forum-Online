@@ -27,18 +27,18 @@
             <section class="post">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="card shadow-sm w-100">
+                        <div class="card shadow-sm w-100 header">
                             <div class="card-header">Pertanyaan > Kategori: <?= $post[0]['nama_kategori']; ?> > <?= $post[0]['judul']; ?></div>
-                            <div class="row mx-2">
-                                <div class="col-md-1">
+                            <div class="row mx-2 g-2">
+                                <div class="col-md-1 d-flex justify-content-center">
                                     <div class="rounded-pill bg-secondary custom-rounded">
                                         <i class="fas fa-user"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-11">
                                     <div class="card-body text-dark">
-                                        <h5 class="card-title"><?= $post[0]['nama']; ?>, <span class="text-color">bertanya pada pukul <?= DateFormat($post[0]['created_at']) ?></span></h5>
-                                        <p class="card-text"><?= $post[0]['pertanyaan']; ?></p>
+                                        <h5 class="card-title text-align"><?= $post[0]['nama']; ?>, <span class="text-color">bertanya pada pukul <?= DateFormat($post[0]['created_at']) ?></span></h5>
+                                        <p class="card-text text-align"><?= $post[0]['pertanyaan']; ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -63,16 +63,16 @@
                                 <?php foreach ($komentar as $k) : ?>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">
-                                            <div class="row mx-2">
-                                                <div class="col-md-1">
+                                            <div class="row mx-2 g-2">
+                                                <div class="col-md-1 d-flex justify-content-center">
                                                     <div class="rounded-pill bg-secondary custom-rounded">
                                                         <i class="fas fa-user"></i>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body text-dark">
-                                                        <h5 class="card-title"><?= $k['nama']; ?>, <span class="text-color">menjawab pada pukul <?= DateFormat($k['created_at']) ?></span></h5>
-                                                        <p class="card-text"><?= $k['komentar']; ?></p>
+                                                        <h5 class="card-title text-align"><?= $k['nama']; ?>, <span class="text-color">menjawab pada pukul <?= DateFormat($k['created_at']) ?></span></h5>
+                                                        <p class="card-text text-align"><?= $k['komentar']; ?></p>
                                                     </div>
                                                 </div>
                                             </div>

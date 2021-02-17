@@ -27,7 +27,7 @@
             <!-- Section Post -->
             <section class="post">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 header-card">
                         <div class="card shadow-sm w-100">
                             <div class="row me-1">
                                 <div class="col-md-8">
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 content-card">
                         <!-- 1 -->
                         <?php $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
                         <?php if (!empty($post)) : ?>

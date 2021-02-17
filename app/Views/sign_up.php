@@ -4,10 +4,10 @@
 
 <header>
     <div class="row h-100 align-items-center">
-        <div class="col-md">
+        <div class="col-md-6 vector d-flex justify-content-center">
             <img src="../Assets/img/laptop.png" alt="">
         </div>
-        <div class="col-md">
+        <div class="col-md-6">
             <h2 class="text-center">Buat Akun Sekarang Juga</h2>
             <p class="text-center">Dapatkan kebebasan berdiskusi untuk menemukan solusi yang terbaik.<br>Tunggu apa lagi ayo gabung !</p>
             <form action="<?= base_url('Forum'); ?>/Register">
@@ -26,7 +26,7 @@
                 <div class="text-center">
                     <button class="btn btn-purple mx-auto rounded-pill">Sign Up</button>
                 </div>
-                <div class="text-center d-flex justify-content-center mt-5 ">
+                <div class="text-center d-flex justify-content-center mt-5" style="padding-bottom: 30px;">
                     <span class="p-2">Sudah punya akun?</span><a class="p-2" href="<?= base_url('/Login'); ?>" style="text-decoration: none; color : hsl(350, 90%, 65%) ;">Login</a>
                 </div>
             </form>

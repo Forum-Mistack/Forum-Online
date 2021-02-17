@@ -4,15 +4,17 @@
 
 <header>
     <div class="row h-100 align-items-center">
-        <div class="col-md">
+        <div class="col-md-6 vector d-flex justify-content-center">
             <img src="../Assets/img/laptop.png" alt="">
         </div>
-        <div class="col-md">
+        <div class="col-md-6">
             <h2 class="text-center">Masuk Untuk Melanjutkan</h2>
             <p class="text-center">Dapatkan kebebasan berdiskusi untuk menemukan solusi yang terbaik.<br>Tunggu apa lagi ayo gabung !</p>
 
             <?php if (session()->getFlashdata('message')) : ?>
-                <div class="alert alert-danger"><?= session()->getFlashdata('message') ?></div>
+                <div class="alert alert-danger mx-4 mx-md-5"><?= session()->getFlashdata('message') ?></div>
+            <?php elseif (session()->getFlashdata('message_success')) : ?>
+                <div class="alert alert-success mx-4 mx-md-5"><?= session()->getFlashdata('message_success') ?></div>
             <?php endif; ?>
 
             <form action="<?= base_url('Forum'); ?>/Auth" method="post">

@@ -87,6 +87,7 @@ class Forum extends BaseController
             'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
         ]);
 
+        $this->session->setFlashdata('message_success', 'Selamat Anda Berhasil Membuat Akun!');
         return redirect()->to('/Login');
     }
 

@@ -26,9 +26,9 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="<?= base_url('/'); ?>"><img src="<?= base_url('Assets'); ?>/img/logo-blue.png"><span class="title-brand title-blue">Mistack</span></a>
+            <a class="navbar-brand brand" href="<?= base_url('/'); ?>"><img src="<?= base_url('Assets'); ?>/img/logo-blue.png"><span class="title-brand title-blue">Mistack</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,7 +40,7 @@
                                 Hallo, <?= $_SESSION['nama']; ?>
                             </button>
                             <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="<?= base_url('/Profile'); ?>/<?= $SESSION['id_pengguna']; ?>" target="_blank">Profile</a></li>
+                                <li><a class="dropdown-item" href="<?= base_url('/Profile'); ?>/<?= $_SESSION['id_pengguna']; ?>" target="_blank">Profile</a></li>
                                 <li><a class="dropdown-item" href="<?= base_url('/Logout'); ?>">Logout</a></li>
                             </ul>
                         </div>
@@ -70,21 +70,15 @@
                     <h5 class="footer-heading">Kategori</h5>
                     <div class="row mt-4">
                         <div class="col">
+                            <p class="paragraph-left">HTML</p>
                             <p class="paragraph-left">Javascript</p>
-                            <p class="paragraph-left">Phyton</p>
-                            <p class="paragraph-left">Ruby</p>
+                        </div>
+                        <div class="col">
                             <p class="paragraph-left">CSS</p>
+                            <p class="paragraph-left">Bootstrap</p>
                         </div>
                         <div class="col">
                             <p class="paragraph-left">PHP</p>
-                            <p class="paragraph-left">HTML</p>
-                            <p class="paragraph-left">React</p>
-                            <p class="paragraph-left">Laravel</p>
-                        </div>
-                        <div class="col">
-                            <p class="paragraph-left">Codeigniter</p>
-                            <p class="paragraph-left">Bootstrap</p>
-                            <p class="paragraph-left">Materialize</p>
                             <p class="paragraph-left">Tailwind</p>
                         </div>
                     </div>
@@ -92,7 +86,7 @@
                 <div class="col-md-3 offset-md-1">
                     <h5 class="footer-heading">Ikuti Kami</h5>
                     <div class="row mt-4">
-                        <div class="col ms-4">
+                        <div class="col ms-1">
                             <a href="#" class="nav-link custom-link"><i class="fab fa-instagram-square fa-2x"></i>Instagram</a>
                         </div>
                     </div>
@@ -107,7 +101,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
     <!-- My JS -->
-    <script src="<?= base_url('Assets'); ?>/js/main.js"></script>
+    <script src="<?= base_url('Assets'); ?>/js/smoothScroll.js"></script>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="<?= base_url('vendor'); ?>/bootstrap/js/bootstrap.bundle.min.js"></script>

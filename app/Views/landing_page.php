@@ -26,7 +26,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="../Assets/img/logo.png"><span class="title-brand">Mistack</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +61,7 @@
     <!-- Jumbotron -->
     <div class="jumbotron" id="home">
         <div class="container">
-            <div class="row justify-content-between align-items-center">
+            <div class="row justify-content-between align-items-center mt-5">
                 <div class="col-md-5">
                     <h1>Cari Masalah Program Mu Disini</h1>
                     <p class="paragraph-left mt-4">Kami membangun produk untuk menemukan solusi yang memungkinkan produktivitas.</p>
@@ -169,21 +169,15 @@
                     <h5 class="footer-heading">Kategori</h5>
                     <div class="row mt-4">
                         <div class="col">
+                            <p class="paragraph-left">HTML</p>
                             <p class="paragraph-left">Javascript</p>
-                            <p class="paragraph-left">Phyton</p>
-                            <p class="paragraph-left">Ruby</p>
+                        </div>
+                        <div class="col">
                             <p class="paragraph-left">CSS</p>
+                            <p class="paragraph-left">Bootstrap</p>
                         </div>
                         <div class="col">
                             <p class="paragraph-left">PHP</p>
-                            <p class="paragraph-left">HTML</p>
-                            <p class="paragraph-left">React</p>
-                            <p class="paragraph-left">Laravel</p>
-                        </div>
-                        <div class="col">
-                            <p class="paragraph-left">Codeigniter</p>
-                            <p class="paragraph-left">Bootstrap</p>
-                            <p class="paragraph-left">Materialize</p>
                             <p class="paragraph-left">Tailwind</p>
                         </div>
                     </div>
@@ -191,7 +185,7 @@
                 <div class="col-md-3 offset-md-1">
                     <h5 class="footer-heading">Ikuti Kami</h5>
                     <div class="row mt-4">
-                        <div class="col ms-4">
+                        <div class="col ms-1">
                             <a href="#" class="nav-link custom-link"><i class="fab fa-instagram-square fa-2x"></i>Instagram</a>
                         </div>
                     </div>

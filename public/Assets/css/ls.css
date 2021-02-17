@@ -1,10 +1,11 @@
 body {
   font-family: "Poppins", sans-serif;
+  padding-bottom: 100px;
 }
 
 header {
   height: 100vh;
-  padding: 0px 60px;
+  padding: 0;
   margin: auto;
 }
 
@@ -18,7 +19,7 @@ header p {
 }
 
 form {
-  padding: 0 80px;
+  padding: 0 30px;
 }
 
 .form-input {
@@ -58,4 +59,27 @@ form {
 .btn-purple:hover {
   background-color: #1b1b3f;
   color: #ffffff;
+}
+
+.vector img {
+  width: 250px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+  header {
+    padding: 0px 60px;
+  }
+
+  form {
+    padding: 0 80px;
+  }
+
+  .vector img {
+    width: 500px;
+  }
 }

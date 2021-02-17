@@ -5,13 +5,13 @@
     <!-- Section Profile User -->
     <div class="card shadow-sm w-100 mb-3">
         <div class="card-body text-dark">
-            <div class="row ">
-                <div class="col-1">
+            <div class="row">
+                <div class="col-2 col-md-1">
                     <div class="rounded-pill bg-secondary custom-rounded">
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
-                <div class="col-10 align-self-center mt-3">
+                <div class="col-9 col-md-10 align-self-center mt-3">
                     <h3><?= $_SESSION['nama']; ?></h3>
                 </div>
             </div>
@@ -23,7 +23,7 @@
     <section class="post">
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-12  header-card">
                 <div class="card shadow-sm w-100">
                     <div class="row mx-2">
                         <div class="col-md-10">
@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-12 content-card">
                 <?php if (!empty($post)) : ?>
                     <?php foreach ($post as $p) : ?>
                         <div class="card shadow-sm w-100">
